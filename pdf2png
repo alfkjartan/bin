@@ -1,0 +1,5 @@
+#!/bin/bash
+# echo "First arg: $1"
+convert -density 300 $1 -resize ${3-25%} $2
+
+

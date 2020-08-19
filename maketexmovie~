@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo About to process file ${1}. 
+
+for n in $2; do
+    echo $n
+    
+       
+for file in $2/[[:digit:]]*.jpg; do
+    NUMBER=$(echo $file | grep -Po '/\K[0-9]+')
+    #echo $NUMBER
+    a=`expr "$NUMBER" + "$1"`
+    #echo mv $file ${3}/$(printf %04d $a).png;
+    mv $file ${3}/$(printf %04d $a).jpg;
+done

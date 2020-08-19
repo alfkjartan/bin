@@ -1,0 +1,5 @@
+#!/bin/bash
+mount /home/kjartan/filr
+rsync -avr --delete /home/kjartan/filrlocal/ /home/kjartan/filr/
+umount /home/kjartan/filr
+

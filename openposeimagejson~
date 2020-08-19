@@ -1,0 +1,9 @@
+#!/bin/sh
+OPENPOSE_HOME=/home/kjartan/projects/openpose
+OLD=$(pwd)
+echo "$OLD"
+cd $OPENPOSE_HOME
+echo "$(pwd)"
+./build/examples/openpose/openpose.bin --net_resolution -1x112 --number_people_max 1 --image_dir "${OLD}/$1"
+
+

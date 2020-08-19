@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo mount -r -t ufs -o ufstype=ufs2 /dev/sdb1 /home/kjartan/wd
+

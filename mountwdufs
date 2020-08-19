@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo mount -r -t ufs -o ufstype=ufs2 /dev/sdb1 /home/kjartan/wdb1
+sudo mount -r -t ufs -o ufstype=ufs2 /dev/sdc1 /home/kjartan/wdc1
+sudo mount -r -t ufs -o ufstype=ufs2 /dev/sdd1 /home/kjartan/wdc1
+

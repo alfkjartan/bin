@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo About to delete directory ${3}. OK [Y/n]?
+read answer
+if [ "$answer" == "n" ]
+then
+    exit 1
+fi
+
+
+if [ -d "$3" ]; then
+    rm -fR $3
+fi
+mkdir $3
+       
+for file in $2/[[:digit:]]*.jpg; do
+    NUMBER=$(echo $file | grep -Po '/\K[0-9]+')
+    #echo $NUMBER
+    a=`expr "$NUMBER" + "$1"`
+    #echo mv $file ${3}/$(printf %04d $a).png;
+    mv $file ${3}/$(printf %04d $a).jpg;
+done

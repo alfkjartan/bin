@@ -1,0 +1,5 @@
+#!/bin/bash
+# echo "First arg: $1"
+find "$PWD"  -name "$1" -exec grep -Hn "$2" {} \;
+
+

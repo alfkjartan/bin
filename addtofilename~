@@ -1,0 +1,15 @@
+#!/bin/sh
+OPENPOSE_HOME=/home/kjartan/projects/openpose
+OLD=$(pwd)
+cd $OPENPOSE_HOME
+case $1 in
+  /*) ./build/examples/openpose/openpose.bin --net_resolution -1x112 --number_people_max 1  --image_dir "$1" --write_json "$2" ;;
+  *) ./build/examples/openpose/openpose.bin --net_resolution -1x112 --number_people_max 1  --image_dir "${OLD}/$1" --write_json "${OLD}/$2" ;;
+esac
+
+
+
+
+for file in [[:digit:]]*.png; do
+    echo mv $file tmp/$(printf %04d $((10#${file%.png}+1))).png
+done

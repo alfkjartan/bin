@@ -1,0 +1,6 @@
+#!/bin/sh
+OPENPOSE_HOME=/home/kjartan/projects/openpose
+cd $OPENPOSE_HOME
+./build/examples/openpose/openpose.bin --net_resolution -1x112
+
+
